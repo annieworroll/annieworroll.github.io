@@ -1,8 +1,10 @@
-div.leftnav {
+div {
     float:left;
+}
+.leftnav {
     padding:10px;
 }
 
-div.body {
+.body {
     padding:10px;
 }
