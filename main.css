@@ -1,10 +1,15 @@
 div {
-    float:left;
-}
-.leftnav {
-    padding:10px;
+   
 }
 
-.body {
+div.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+div.leftnav {
+    padding:10px;
+
+div.body {
     padding:10px;
 }
