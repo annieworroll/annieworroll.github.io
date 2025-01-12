@@ -1,7 +1,8 @@
 div.leftnav {
+    float:left;
     padding:10px;
 }
 
 div.body {
-    float:right;
+    padding:10px;
 }
