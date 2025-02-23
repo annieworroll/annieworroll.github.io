@@ -20,54 +20,20 @@
     </div>
   </header>
 
-  <div class="container">
-    <section id="main_content">
-      {% if site.paginate %}
-      {% assign posts = paginator.posts %}
-      {% else %}
-      {% assign posts = site.posts %}
-      {% endif %}
-        
-      {%- if posts.size > 0 -%}
-      {%- if page.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-      {%- endif -%}
-      <ul class="post-list">
-	{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-	{%- for post in posts -%}
-	<li>
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
-          <h3>
-            <a class="post-link" href="{{ post.url | relative_url }}">
-              {{ post.title | escape }}
-            </a>
-          </h3>
-          {%- if site.minima.show_excerpts -%}
-          {{ post.excerpt }}
-          {%- endif -%}
-	</li>
-	{%- endfor -%}
-      </ul>
-      
-      {% if site.paginate %}
-      <div class="pager">
-        <ul class="pagination">
-          {%- if paginator.previous_page %}
-          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
-          {%- else %}
-          <li><div class="pager-edge">•</div></li>
-          {%- endif %}
-          <li><div class="current-page">{{ paginator.page }}</div></li>
-          {%- if paginator.next_page %}
-          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
-          {%- else %}
-          <li><div class="pager-edge">•</div></li>
-          {%- endif %}
-        </ul>
-      </div>
-      {%- endif %}
-
-      {%- endif -%}
-    </section>
+  <div>
+    <table>
+      <tr>
+	<td><a href="{{ '/' | relative_url }}"><h3>Home</h3></a></td>
+	<td><a href="codereview.html"><h3>Code Review</h3></a></td>
+	<td><a href="milestone2.md"><h3>Milestone 2</h3></a></td>
+	<td><a href="milestone3.md"><h3>Milestone 3</h3></a></td>
+	<td><a href="milestone4.md"><h3>Milestone 4</h3></a></td>
+	  
+      </tr>
+    </table>
+  </div>
+  
+  <div>
+    {{ content }}
   </div>
 </body>
